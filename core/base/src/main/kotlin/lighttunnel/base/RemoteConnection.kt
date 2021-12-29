@@ -1,17 +1,16 @@
+@file:Suppress("MemberVisibilityCanBePrivate")
+
 package lighttunnel.base
 
 import lighttunnel.base.proto.ProtoException
-import lighttunnel.base.utils.emptyBytes
+import lighttunnel.base.proto.emptyBytes
 import lighttunnel.base.utils.getOrDefault
 import org.json.JSONObject
 import java.io.Serializable
 import java.net.InetSocketAddress
 import java.net.SocketAddress
 
-@Suppress("MemberVisibilityCanBePrivate")
-class RemoteConnection(
-    val address: SocketAddress
-) : Serializable {
+class RemoteConnection(val address: SocketAddress) : Serializable {
 
     companion object {
         private const val serialVersionUID = 1L

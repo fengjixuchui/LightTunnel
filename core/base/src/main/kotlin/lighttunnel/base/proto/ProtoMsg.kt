@@ -1,17 +1,17 @@
+@file:Suppress("FunctionName")
+
 package lighttunnel.base.proto
 
 import lighttunnel.base.RemoteConnection
 import lighttunnel.base.TunnelRequest
 import lighttunnel.base.utils.asBytes
 import lighttunnel.base.utils.asLong
-import lighttunnel.base.utils.emptyBytes
 
 sealed class ProtoMsg(
     val type: ProtoMsgType,
     val head: ByteArray,
     val data: ByteArray
 ) {
-    @Suppress("FunctionName")
     companion object {
         private fun UNKNOWN() = UnknownMsg
         fun HEARTBEAT_PING() = HeartbeatPingMsg

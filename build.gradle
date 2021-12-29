@@ -1,7 +1,7 @@
 buildscript {
-    ext.kotlin_version = "1.5.21"
+    ext.kotlin_version = "1.6.10"
     ext.jvm_version = "1.8"
-    ext.netty_version = "4.1.66.Final"
+    ext.netty_version = "4.1.72.Final"
     extensions.GitVcConfig = [
         ENABLE_BRANCH: true,
     ]
@@ -35,6 +35,6 @@ apply plugin: "com.github.tuuzed.gitvc"
 group "lighttunnel"
 version GitVc.VERSION_NAME.toUpperCase()
 
-static def buildString(Object o) { return "\"" + o + "\"" }
+static def buildString(Object o) { return '"' + o + '"' }
 
 
